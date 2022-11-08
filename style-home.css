@@ -1,0 +1,58 @@
+#imagen{ 
+       /* display: block; /*imagen como bloque para centrar*/
+       width: 100%; /*Ancho de imagen si es 100% el navegador la ajusta*/
+       /*margin: 30px;*/
+       /*codigo para centrar*/
+       height: auto;
+       margin-left: auto;
+       margin-right: auto;
+}
+
+.principal{
+    background-color: lightgrey;
+    padding: 20px; /*espaciado interno del bloque tanto desde arriba y desde abajo*/
+}
+
+.titulo-principal{
+    padding-left: 30px;
+}
+
+p{
+    text-align: center;
+}
+
+
+#mision{ /* id, para que en donde se ponga va a corresponder a lo que contenga el nombre del id */
+    font-size: 20px;
+}
+
+em strong{
+    color: rgb(100,0,0);
+}
+
+.segundo{
+    background-color: white;
+    padding: 20px;
+}
+
+.titulo{
+    text-align: center;
+}
+ul{
+    display: inline-block; /*para que no abarque la linea completa mi item de la lista y este por bloque y acabe hasta el espacio que ocupa nadamas mis caracteres (Block es para que abarque toda la linea.  Inline es para que solo abarque el espacio de los caracteres que se estan usando*/
+    
+    vertical-align: top; /*alineado a la parte superior*/
+    width: 20%;
+    margin: 0 30px 0 0; /* arriba derecha abajo e izquierda*/
+    padding: 147.4px 0 147.4px 40px; /*para que quede centrado de arriba hacia abajo de acuerdo al largo del bloque que no corresponde al de la imagen*/
+    
+}
+
+#imagen2{
+    width: 50%;
+    height: 350px;
+}
+
+.items{  /* .NOMBRE DE CLASE, POR EJEMPLO .items{ diseño visual } sera para ponerlo en forma de clases e igual se tendra que poner en cada uno de los elementos de la    lista*/
+    font-style: italic;
+}

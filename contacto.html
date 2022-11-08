@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> <!-- ESTA ETIQUETA se usa para que nuetsra pagina sea abierta sin ningun problema en celulares, ipad, computadoras, etc y tenga  las mismas estructuras en la que fue diseñada-->
+        
+        <title> Contacto </title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--esto es para poner otro tipo de fuente desde google fonts, aqui se copia el codigo html y en css la parte que corresponde-->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="caja">
+
+                <h1><img src="imagen/logo.png" alt="Logo de la barberia Alura"></h1> <!--alt es para poner un texto alternativo a la imagen por si no carga la pagina-->
+
+                <nav>
+                    <ul>
+                        <li> <a href="productos.html">Productos</a> </li>
+                        <li> <a href="editando texto.html"> Home </a> </li>
+                        <li> <a href="contacto.html"> Contacto</a></li> <!-- para paginas web es: https//:www.google.com.mx-->
+                    </ul>
+                </nav>  <!--Etiqueta para poner panel de navegacion-->
+
+            </div>
+
+        </header>
+
+        <main>
+            <div class="contenido-contacto">
+                <form>
+
+                    <label for="nombreyapellido"> Nombre y Apellido </label>
+                    <input type="text" id="nombreyapellido" class="input-padron" required> <!--Id es para que cuando se de clic en el texto sepa que corresponde al input en donde tiene el nombre del Id indicado. El requiered es para que no se dejen espacios vacios-->
+        
+                    <label for="correoelectronico"> Correo Electrónico </label>
+                    <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com"> <!--se tiene un tipo de input=email para que en el celular detecte que se escribira un correo electronico, al igual que abajo con el input tel. Placeholder sera para poner el tipo de datos que se espera en el recuadro del input-->
+        
+                    <label for="telefono"> Teléfono </label>    
+                    <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                    <label for="mensaje"> Mensaje </label>
+                    <textarea cols="70" rows="10" id="mensaje" class="input-padron" required> </textarea> <!--textarea sirve para poner un cuadro o area ampliable por el usuario en la que se puede escribir un mensaje, cols (columnas) y rows (filas) son para la dimension de nuestra area-->
+
+                    <fieldset> <!--Le decimos al navegador que se hace referencia a un tipo de datos conjuntos o que estan relacionados-->
+
+                        <legend class="contactos"> ¿Cómo le gustaría que lo contactáramos? </legend>
+
+                        <label for="radio-whatsapp"> <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp     </label> <!--type="radio" es para colocar un circulo selector, name="contacto" es para que de los circulos que tengan ese nombre, se pueda seleccionar uno solo, para que todos los elementos formen parte del mismo grupo, y su correspondiente value-->
+
+                        <label for="radio-correo"> <input type="radio" name="contacto" value="correoelectronico" id="radio-correo">Correo Electrónico </label>
+                    
+                        <label for="radio-teléfono"> <input type="radio" name="contacto" id="radio-teléfono" value="telefono"> Teléfono    </label>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend class="contactos"> ¿En qué horario prefiere ser atendido? </legend>
+
+                        <select> <!--Se usa para hacer una lista en la que se puede seleccionar alguna de las opciones que se pongan-->
+                            <option> Mañana </option> <!--Crea los items seleccionables de un select-->
+                            <option> Tarde </option>
+                            <option> Noche </option>
+                        </select>
+
+                    </fieldset>
+
+                    <label class="checkbox"> ¿Le gustaría recibir novedades de la Barbería Alura? <input type="checkbox" checked> </label><!-- Se pone en el mismo renglo para que visualmenete se aprecie en el siguiente orden: 1°Texto 2°input checkbox De esta forma se puede crear un input dentro de un label, asociandolos-->
+    
+                    <div class="formulario">
+                        <input type="submit" value="Enviar formulario" class="enviar">
+                    </div>
+
+                    <table> <!-- Se usa para hacer tablas con el formato de tr para lineas y td para columnas con respecto a la linea en donde esta siendo escrita-->
+
+                        <thead>
+
+                            <tr>
+                                <th> Día </th> <!--th se usa cuando ponemos las etiquetas de thead para nuestro encabezado de la tabla-->
+                                <th> Horario </th>
+                            </tr>
+
+                        </thead>
+        
+                        <tbody>
+
+                            <tr>
+                                <td> Lunes </td>
+                                <td> 11:00am - 20:00pm </td>
+                            </tr>
+        
+                            <tr class="martes">
+                                <td> Martes </td>
+                                <td> 11:00am - 20:00pm </td>
+                            </tr>
+            
+                            <tr>
+                                <td> Miercoles </td>
+                                <td> 11:00am - 20:00pm </td>
+                            </tr>
+        
+                            <tr class="jueves">
+                                <td> Jueves </td>
+                                <td> 11:00am - 20:00pm </td>
+                            </tr>
+        
+                            <tr>
+                                <td> Viernes </td>
+                                <td> 11:00am - 20:00pm </td>    
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </form>
+            </div>
+        </main>
+
+        <footer>
+
+            <img src="imagen/logo-blanco.png" alt="Logo de la barberia Alura">
+            <p class="copyright">&copy Copyright Barbería Alura-2022</p> <!-- &copy es el codigo para poner el caracter de C de copyright-->
+
+        </footer>
+
+    </body>
+
+</html>

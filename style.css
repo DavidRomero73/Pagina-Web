@@ -1,0 +1,378 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/***************************************** AQUI INICIA PARA LA PARTE DEL ENCABEZADO*******************************************/
+
+
+
+header{ /*Jerarquia en CSS (Inline (son poner el estilo directamente en la linea de codigo del html 10,000 ID 1000 class 100 etiqueta (p, strong, em, entre otras) 10 y se van sumando jerarquicamente por lo que hay que fijarse cual se pone detras de otra o despues y a que le va a hacer caso el CSS)*/ 
+    background-color: lightgrey;
+    padding: 20px 0; /*Para agregar un espaciamiento interno (alargacion del elemento) de 20px arriba y abajo*/
+}
+
+.caja{
+    width: 940px; /*mas o menos el 70% de la anchura del total de la pantalla*/
+    position: relative;
+    margin: 0 auto; /*para que quede junto a los limites de la dimension del Div o bloque que se creo y se vea centrado */
+}
+
+nav{
+    position:absolute;
+    top: 110px;
+    right: 0px;
+
+    /*asi quedaria alineado en medio, medir cuanto es la anchura en px con las herramientas del navegador y de recorrerlo de izq y derecha la mitad en ambos lados la diferencia al total de ancho( TOTAL 981.6, anchura de textp 356.28, diferencia de 625.32, eso entre dos para recorrerlo en izq y derecha)
+    right: 312.66px;
+    left: 312.66px;*/
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 15px; /*arriba, derecha, abajo, izquierda*/   
+}
+
+nav a{
+        text-transform: uppercase;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+
+
+/***************************************** AQUI INICIA PARA LA PARTE DE PRODUCTOS*******************************************/
+
+
+
+.servicios{
+    width: 940px;
+    margin: 0  auto;
+    padding: 20px;
+}
+
+
+.servicios li{
+    display: inline-block;
+    text-align: center;
+    width:30%;
+    height: 400px; /*Para que no sobrepase esa altura*/
+    vertical-align: top;    
+    margin: 0 1.5%; /* margen externo(vertical, horizontal)*/
+    padding: 30px 20px; /*vertical, horizontal*/
+    box-sizing: border-box; /* Se usa para que no sobrepase el 30% de cada bloque con el padding, y este se habilite dentro de la cantidad del 30%*/
+    border: 2px solid #000000; /*borde de 2px estilo solido y color negro (3 parametros)*/
+    border-radius: 30px; /*Se usa para redondear la esquinas de los bordes, lleva 4 parametros (izq superior, der superior, izq inferior der inferior) aqui al solo ocupar uno se entiende que es para los 4 parametros. 10px sera el radio del redondeo de las puntas*/
+}
+
+.servicios li:hover{/* hover es para cuando pase el mouse por esta clase se activara lo que tenga escrito esta acción para este caso cuando pase el renglon se cambiara el color del borde*/ 
+    border-color: #c78c19;
+}
+
+.servicios li:active{ /*active es cuando se de clic en esta area y sucede lo que esta escrito, en este caso cuando se da clic cambia el color del borde*/
+    border-color: green;
+}
+
+.servicios h2{
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+
+.servicios li:hover h2{
+    font-size: 30px;
+}
+
+.p1{
+    font-size: 18px;
+}
+
+.p2{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+
+/************************************* AQUI INICIA EL ESTILO DE CONTACTO***********************************/
+
+
+
+.contenido-contacto{
+    width: 940px;
+    margin: 0 auto;
+} /* el contenido contacto es lo mismo que haciamos con el main
+main{
+    width: 940px;
+    margin: 0 auto;
+}*/
+
+form{
+    width: 50%;
+    margin: 40px auto;
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px; 
+}
+
+.input-padron{  
+    display: block;
+    width: 470px;
+    margin: 0 0 20px;
+    padding: 5px 25px;
+    font-size: 15px;
+    font-style: italic  ;
+    box-sizing: border-box; /*Para que no sobrepase la anchura de 470px que es el 50% (form) del total del main*/
+}
+
+.contactos, .checkbox{ /*Con (coma,) puedes poner las mismas caracteristicas para diferentes clases o selectores de elementos (p,h1,etc) o Id´s   etiquetas*/
+    font-style: italic;
+    font-size: 20px;
+    margin: 20px 0 20px;
+}
+
+.formulario{ /*ancho del 70% del form al ser ajustado para el centro*/
+    width: 70%;
+    margin: auto;
+}
+
+.enviar{ /*ocupa el 100% del area de mi clase formulario*/
+    width: 100%;              
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s background;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;  
+    transform: scale(1.2); /*Hara que incremente lo que identifica a la clase en la escala dada, TAMBIEN se puede poner rotate(#deg);*/    
+}
+
+table{
+    width: 50%;
+    margin: 30px auto;  
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    padding: 10px;
+    /*border: 1px solid black; esto seria si le pusieramos borde a la tabla tanto para las columnas del encabezado y del body, con poner para las columnas ya se ponen las lineas*/
+}
+
+.martes, .jueves{
+    background: #555555;
+    color: white;
+}
+
+
+
+
+/************************************** ESTILO PARA LA PAGINA PRINCIPAL - HOME**************************************/
+
+
+
+
+.imagen{
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+
+/* LO SIGUIENTE ES PARA SELECCIONAR ELEMENTOS ESPECIFICOS DENTRO DE NUESTRA PAGINA
+
+main > p{ /*Con el simbolo ">" es para decir que los hijos directos con la etiqueta p sean pintados de rojo, SOLO LOS HIJOS DIRECTOS
+    background: red;
+}
+
+img + p{ /*Con el simbolo "+" le decimos que la etiqueta p siguiente de cualquier imagen sera pintada de amarillo
+    background: yellow;  
+}
+
+img ~ p{ /*Con el simbolo "~" le decimos que todas las etiquetas p que vienen despues de una imagen o cualquier imagen se pinten 
+    background: green;
+}
+
+.principal p:not(#mision){ con esta estructura le decimos que a todas las etiquetas p de la clase principal las pinte de rojo excepto en donde este el id mision que tambien puede ser una clase, con la etiqueta para exceptuar no funciona
+    background: red;
+}
+
+*/
+
+
+.degradado{
+    background: linear-gradient(#FEFEFE, #888888); /*Con linear gradient le decimos que vaya de un color a otro, pueden ser todos los colores que queramos. TAMBIEN podemos ponerlo para que vayan pintandose en ciertos grados (45deg, orange, black, red) aqui pinta en un angulo de 45°. TAMBIEN podemos ponerlo que cada uno de los colores pintados tengan mas o menos proporcion (90deg orange 50%, black 20%, red) aqui le digo que en un angulo de 90° me pinte el 50% de naranja y el 20 de negro y lo demas de los otros colores. TAMBIEN con radial-gradient puede ser en forma de elipsis.*/
+}
+
+.principal{
+    padding: 3em 0 3em 0;  
+    width: 940px;
+    margin: 0 auto;
+}
+
+.tituloprincipal{
+    text-align: center;
+    font-size: 2em; /*em se usa como referencia para los px que ya se tienn por default, aqui estoy diciendo que quiero el tamaño de mi fuente 2 veces el numero de pixeles que ya se tienen por default o fuente padron que son 15px*/
+    margin: 0 0 1em 0;
+    clear: left; /*Sirve para que las configuraciones despues al o los titulos no me afecten y sean limpiado todo lo de la izquierda*/
+   /* text-shadow: 2px 2px 10px red; ESTO ES para efecto de sombra en el texto, funciona como el box-shadow solo que aqui el tercer parametro es para el spread, los primeros dos son derecha (-# izquierda) y abajo (-# arriba) */
+}
+
+/*.tituloprincipal:first-letter{   Estructura para un pseudo elemento, de esta forma indicamos que la primera letra de nuestro titulo la queremos en negrita
+    font-weight:bold;
+}*/
+
+/*p:first-line{  Aqui seria para la etiqueta p
+    font-style: italic;
+}*/
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: calc(10% + (5px)); /* Con la opcion CALC podemos calcular la dimension de la imagen y sumarle, restarle, o cualquier otra operacion para que quede a las dimensiones que queremos*/
+    float: left; /*Sirve para colocar un objeto como si se despegara de la pantalla y dejara una sombra del objeto, con left quiere decir el posiscionamiento de la propiedad, que se pondra a la izquierda de los demas elementos que esten, es decir, los elementos estaran a su derecha*/
+    margin: 0 20px 10px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+}
+
+.mapa p{
+    padding: 0 0 2em 0;
+    text-align: center;
+}
+
+.contenido-mapa{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    vertical-align: top;
+    display: inline-block;  
+}
+
+.items{
+    /*line-height: 1.5em; line-height es cuanto espacio habra entre renglon y renglon del texto y aqui es de 1.5 veces el tamaño de letra padron, que es de 16px*/
+    padding: 0 0 1em 0;
+}
+
+.items:before{/*Aqui tambien tenemos un pseudo elemnto pero le decimos que en donde encuentre un item o la clase item me ponga al principio del contenido de este el contenido que se digite, en este caso el simbolo de una estrella. TAMBIEN puede ser al final con "after"*/
+    content: "✯";
+}
+
+.items:first-child{/*con :first-child le digo que al primer hijo de nuestro bloque de elementos que para este caso es nuestra clase items la ponga de color negrito, puede ser segundo o last para ultimo, con nth() en los parentesis se pone el numero de renglon que quieres que sea marcado con el estilo determinado, 2n por ejemplo seria para los renglones pares*/
+
+    font-weight:bold;
+}
+
+.imagen2{
+    width: 60%;
+    box-shadow: 10px 10px 30px 10px black; /*ESTA PROPIEDAD sirve para poder darle un efecto de sombra EXTERNA a nuestra imagen, texto, seccion o elemento, los parametros son: 10px derecha (-10 izquierda) y 10px abajo (-10 arriba) deben de ser por pares iguales 10 y 10 o -10 y -10, 30px es el difuminado o degradado que queremos, 20px es la propagacion o "spread" que tendra nuestro efecto y finalmenete el color */ 
+}
+
+.imagen2:hover{
+    opacity: 30%;/*Con esto le digo que al pasar el mouse por la imagen quiero que su opacidad cambie a 30%, es decir solo dejara pasar un 30% de luz a la imagen*/
+
+    /* TAMBIEN PUEDE SER ASI:  rgba(0,0,0,30%) aqui tengo un color negro al 30% de opacidad*/
+}
+
+.video{
+    padding: 0 0 3em 0; 
+    /* box-shadow: inset 0 0 30px red;  ESTO SIRVE para poner un efecto o capa interna con la propiedad "inset" lo que hara es que a todo el espacio de nuestra seccion de video la pintara de rojo, los parametros son 0 0 porque queremos que inicie desde el centro 30px es hasta cuanto queremos que llegue nuestra sombra internamente y el color */
+}
+
+.contenido-video{
+    width: 560px;
+    margin: 0 auto;
+}
+
+
+/*MEDIA QUERY*/
+@media screen and (max-width: 900px) {  /*Es una condicion en la que si se cumple lo del parentesis entonces hara lo que se indique posteriormente. POR EJEMPLO en este caso le decimos que si identifica una pantalla con maximo 480px o menor o igual a 480px de anchura pinte el background de body de la pagina en rojo*/
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+        text-align: center;
+    }
+
+    .caja, .principal, .mapa, .contenido-mapa, .contenido-diferenciales, .contenido-video, .contenido-contacto, .servicios{
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen2{
+        width: 100%;
+        text-align: center;
+    }
+
+    form{
+        width: 100%;  
+    }
+
+    .input-padron{
+        width: 100%;
+    }
+
+    .servicios li{
+        width: 100%;
+        margin: 1.5% 1.5%;
+    }
+}
+
+/***************************************** PIE DE PAGINA ***********************************************/
+footer{
+    text-align: center;
+    background: url(imagen/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+
+
